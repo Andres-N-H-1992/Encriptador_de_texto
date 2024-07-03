@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./imagenes/favicon.ico">
+    <link rel="stylesheet" href="css/estylos.css">
+    <title>Challenge: Encriptador de texto</title>
+</head>
+
+<body>
+
+    <!-- encabezado -->
+    <header>
+        <!-- Enlace al inicio (puede ser utilizado para redirigir a la página principal) -->
+        <a href="#" rel="">
+            <!-- Imagen del logo de Alura -->
+            <img src="./imagenes/logo.svg" alt="Logo Alura" class="logo">
+        </a>
+    </header>
+
+    <!-- seccion principal-->
+    <main>
+        <!-- Sección para el Encriptador -->
+        <section class="Encriptador">
+            <!-- Área de texto para ingresar el texto a encriptar -->
+            <textarea class="Encriptar" placeholder="Ingrese el texto aqui"></textarea>  <!-- placeholder proporciona un texto de ejemplo para guiar al usuario sobre qué tipo de información debe ingresar en el campo de texto-->
+            <!-- Div para mostrar un aviso al usuario -->
+            <div class="Encriptador-aviso">
+                <!-- Imagen del aviso -->
+                <img src="./imagenes/aviso.svg" alt="Imagen Aviso" class="img-aviso">
+                <!-- Texto del aviso -->
+                <p class="texto-aviso"> Solo letras minusculas y sin acentos</p>
+            </div>
+            <!-- Contenedor para los botones de encriptar y desencriptar -->
+            <div class="Encriptador-contenedor">
+                <!-- Botón para encriptar el texto ingresado -->
+                <button type="submit" class="btn-encriptar">Encriptar</button>
+                <!-- Botón para desencriptar el texto ingresado -->
+                <button type="submit" class="btn-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="tarjeta">
+            <!-- Contenedor principal de la tarjeta -->
+            <div class="tarjeta-contenedor">
+                <!-- Imagen del muñeco -->
+                <img src="./imagenes/muñeco.svg" alt="Imagen Muñeco" class="img-muñeco">
+                <!-- Primer texto -->
+                <p class="texto-uno">Ningun mensaje fue encontrado</p>
+                <!-- Segundo texto -->
+                <p class="texto-dos">Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <!-- Área de texto para mostrar el mensaje, readonly evita que se pueda editar -->
+            <textarea type="mensaje" class="evaluar" readonly></textarea>
+            <!-- Botón para copiar el contenido del área de texto -->
+            <button type="submit" class="btn-copiar">Copiar</button>
+        </section>
+        
+    </main>
+
+    <!--pie de pagina-->
+    <footer>
+        <p class="copyright"> &copy; copyright 2024 - Encriptador de Texto - Desarrollado por Banner Andres Nuñez H.</p>
+        <a href="#" rel="" >
+            <img src="./imagenes/linkedin.svg" alt="Logo linkedin" class="linkeding">
+            <img src="./imagenes/github.svg" alt="Logo Github" class="gitHub">
+        </a>
+    </footer>
+
+    <script src="./js/encriptador.js"> </script>
+
+
+</body>
+
+</html>

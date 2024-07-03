@@ -1,0 +1,367 @@
+/*
+ Fuentes de estilos de letras Google Fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*
+Variables globales
+*/
+:root{
+    --Font:#e5e5e5; /* Color de fuente global */
+    --white:#ffffff; /* Color blanco */
+    --Dark-Blue:#0a3871; /* Color azul oscuro */
+    --Greey:#c5c5c5; /* Color gris */
+    --Mediun-gray:#67808e; /* Color gris medio */
+    --RGBA:rgba(0,0,0,0.08); /* Color negro con opacidad */
+    --white-blue:#d8dfe8; /* Color blanco azulado */
+    --Mediun-blue:#0a38718a; /* Color azul medio */
+    --Gray:#343a40; /* Color gris oscuro */
+    --gree:#495057; /* Color verde grisáceo */
+}
+
+*{
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar relleno por defecto */
+    box-sizing: border-box; /* Incluir el padding y border en el ancho y alto del elemento */
+    font-family: 'Inter', sans-serif; /* Establecer la fuente de la familia 'Inter' */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    background: var(--white); /* Establecer fondo blanco */
+}
+
+::selection{
+    background: var(--Dark-Blue); /* Fondo azul oscuro para texto seleccionado */
+    color: var(--white); /* Texto blanco para texto seleccionado */
+}
+
+body{
+    height: 100%; /* Altura completa de la ventana */
+}
+
+img{
+    max-width: 100%; /* Asegurar que las imágenes no excedan el ancho de su contenedor */
+}
+
+/*
+ Encabezado
+*/
+header{
+    position: absolute; /* Posición absoluta */
+    margin: 40px 0px 0px 40px; /* Márgenes del encabezado */
+}
+header .logo{
+    display: flex; /* Usar flexbox */
+    align-items: flex-start; /* Alinear elementos al inicio */
+    width: 120px; /* Ancho del logo */
+    height: 48px; /* Altura del logo */
+}
+
+/*
+ Sección principal
+*/
+main{
+    display: flex; /* Usar flexbox */
+    flex-direction: row; /* Dirección de los elementos en fila */
+    background: url(../imagenes/portada.png) no-repeat; /* Fondo con imagen sin repetición */
+    background-size: cover; /* Cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen de fondo */
+}
+
+.Encriptador{
+    width: 60%; /* Ancho del encriptador */
+    margin: 168px 0px 0px 140px; /* Márgenes del encriptador */
+    background: transparent; /* Fondo transparente */
+}
+
+.Encriptar{
+    width: 660px; /* Ancho del área de texto */
+    height: 288px; /* Altura del área de texto */
+    font-weight: 400; /* Peso de la fuente normal */
+    font-size: 32px; /* Tamaño de fuente */
+    line-height: 48px; /* Altura de línea */
+    outline: none; /* Sin contorno al enfocarse */
+    border: 1px solid var(--Greey); /* Borde gris */
+    border-radius: 15px; /* Bordes redondeados */
+    resize: none; /* No redimensionable */
+}
+
+.Encriptar::placeholder, :focus{
+    color: var(--Dark-Blue); /* Color del placeholder y del texto enfocado */
+}
+
+.Encriptador-aviso{
+    display: flex; /* Usar flexbox */
+    flex-direction: row; /* Dirección en fila */
+    align-items: center; /* Alinear al centro */
+    padding: 0; /* Sin relleno */
+    gap: 8px; /* Espacio entre elementos */
+    position: absolute; /* Posición absoluta */
+    top: 500px; /* Distancia desde arriba */
+}
+
+.texto-aviso{
+    width: 100%; /* Ancho completo */
+    font-style: normal; /* Estilo de fuente normal */
+    font-weight: 400; /* Peso de la fuente normal */
+    font-size: 18px; /* Tamaño de fuente */
+    line-height: 150%; /* Altura de línea */
+    opacity: 0.8; /* Opacidad */
+    color: var(--Mediun-gray); /* Color gris medio */
+}
+
+.Encriptador-contenedor{
+    display: flex; /* Usar flexbox */
+    flex-direction: row; /* Dirección en fila */
+    align-items: flex-start; /* Alinear al inicio */
+    gap: 8px; /* Espacio entre elementos */
+    position: absolute; /* Posición absoluta */
+    top: 526px; /* Distancia desde arriba */
+}
+
+.btn-encriptar{
+    width: 328px; /* Ancho del botón */
+    height: 67px; /* Altura del botón */
+    padding: 24px; /* Relleno del botón */
+    font-style: normal; /* Estilo de fuente normal */
+    font-weight: 400; /* Peso de la fuente normal */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 19px; /* Altura de línea */
+    text-align: center; /* Alinear texto al centro */
+    color: var(--white); /* Color del texto */
+    background: var(--Dark-Blue); /* Fondo azul oscuro */
+    border: 1px solid var(--Dark-Blue); /* Borde azul oscuro */
+    border-radius: 24px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    box-shadow: 0px 20px 29px --5px var(--RGBA); /* Sombra del botón */
+}
+.btn-encriptar:active{
+    box-shadow: inset 2px 2px 4px var(--Font); /* Sombra interior al hacer clic */
+    inset: .3px -4px 8px var(--Dark-Blue); /* Sombra adicional al hacer clic */
+    color: var(--white-blue); /* Cambiar color de texto al hacer clic */
+}
+
+.btn-desencriptar{
+    width: 328px; /* Ancho del botón */
+    height: 67px; /* Altura del botón */
+    padding: 24px; /* Relleno del botón */
+    font-style: normal; /* Estilo de fuente normal */
+    font-weight: 400; /* Peso de la fuente normal */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 19px; /* Altura de línea */
+    text-align: center; /* Alinear texto al centro */
+    color: var(--Dark-Blue); /* Color del texto azul oscuro */
+    background: var(--white-blue); /* Fondo blanco azulado */
+    border: 1px solid var(--Dark-Blue); /* Borde azul oscuro */
+    border-radius: 24px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    box-shadow: 0px 20px 29px --5px var(--RGBA); /* Sombra del botón */
+}
+
+.btn-copiar:active,
+.btn-desencriptar:active{
+    box-shadow: inset 2px 2px 4px var(--Dark-Blue), /* Sombra interior al hacer clic */
+    inset -3px -4px 8px var(--Font); /* Sombra adicional al hacer clic */
+    color: var(--Mediun-blue); /* Cambiar color de texto al hacer clic */
+}
+
+.tarjeta{
+    width: 270px; /* Ancho de la tarjeta */
+    height: 580px; /* Altura de la tarjeta */
+    background: var(--Font); /* Fondo de la tarjeta */
+    box-shadow: var(--Gray); /* Sombra de la tarjeta */
+    position: relative; /* Posición relativa */
+    margin-top: 40px; /* Margen superior */
+    border-radius: 32px; /* Bordes redondeados */
+    text-align: center; /* Alinear texto al centro */
+}
+
+.tarjeta-contenedor{
+    width: 250px; /* Ancho del contenedor */
+    margin: auto; /* Centrar contenedor */
+    margin-top: 50%; /* Margen superior */
+    background: var(--Font); /* Fondo del contenedor */
+}
+
+.img-muñeco{
+    background: var(--Font); /* Fondo de la imagen */
+}
+
+.texto-uno{
+    font-style: normal; /* Estilo de fuente normal */
+    font-weight: 700; /* Peso de la fuente negrita */
+    font-size: 18px; /* Tamaño de fuente */
+    line-height: 120%; /* Altura de línea */
+    text-align: center; /* Alinear texto al centro */
+    color: var(--Gray); /* Color del texto gris oscuro */
+    background: var(--Font); /* Fondo del texto */
+}
+
+.texto-dos{
+    font-style: normal; /* Estilo de fuente normal */
+    font-weight: 400; /* Peso de la fuente normal */
+    font-size: 12px; /* Tamaño de fuente */
+    line-height: 150%; /* Altura de línea */
+    text-align: center; /* Alinear texto al centro */
+    color: var(--Mediun-gray); /* Color del texto gris medio */
+    background: var(--Font); /* Fondo del texto */
+}
+
+.evaluar{
+    width: 100%; /* Ancho completo */
+    height: 485px; /* Altura */
+    position: absolute; /* Posición absoluta */
+    padding: 20px; /* Relleno */
+    top: 0; /* Desde arriba */
+    left: 0; /* Desde la izquierda */
+    font-weight: 400; /* Peso de la fuente normal */
+    font-size: 24px; /* Tamaño de fuente */
+    line-height: 36px; /* Altura de línea */
+    color: var(--gree); /* Color verde grisáceo */
+    background: transparent; /* Fondo transparente */
+    border-top-right-radius: 32px; /* Borde superior derecho redondeado */
+    border-top-left-radius: 32px; /* Borde superior izquierdo redondeado */
+    border: none; /* Sin borde */
+    resize: none; /* No redimensionable */
+}
+
+.evaluar:focus{
+    outline: none; /* Sin contorno al enfocarse */
+}
+
+.btn-copiar{
+    width: 224px; /* Ancho del botón */
+    height: 67px; /* Altura del botón */
+    margin: 23px; /* Márgenes */
+    position: absolute; /* Posición absoluta */
+    bottom: 0; /* Desde abajo */
+    left: 0; /* Desde la izquierda */
+    visibility: hidden; /* Ocultar botón */
+    padding: 24px; /* Relleno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 19px; /* Altura de línea */
+    text-align: center; /* Alinear texto al centro */
+    background: var(--white-blue); /* Fondo blanco azulado */
+    border: 1px solid var(--Dark-Blue); /* Borde azul oscuro */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover{
+    transform: scale(0.95); /* Reducir tamaño al pasar por encima */
+}
+
+/*
+ Pie de página o "footer"
+*/
+footer {
+    margin-top: 15px; /* Margen superior */
+    padding: 10px; /* Relleno */
+    border-top: 2px solid var(--Font); /* Borde superior */
+    color: var(--Gray); /* Color del texto */
+    text-align: center; /* Alinear texto al centro */
+    height: 5px; /* Altura */
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: 700; /* Peso de la fuente negrita */
+    color: var(--Gray); /* Color del texto */
+}
+
+.linkeding:hover{
+    color: var(--Font); /* Cambiar color al pasar por encima */
+    opacity: 0.8; /* Cambiar opacidad al pasar por encima */
+}
+
+.gitHub:hover{
+    color: var(--Font); /* Cambiar color al pasar por encima */
+    opacity: 0.6; /* Cambiar opacidad al pasar por encima */
+}
+
+/*
+ Media queries (responsive design)
+*/
+@media(max-width: 1250px){
+    main{
+        display: flex; /* Usar flexbox */
+        flex-direction: column; /* Dirección en columna */
+        align-items: center; /* Alinear elementos al centro */
+        width: 100%; /* Ancho completo */
+    }
+    .Encriptador{
+        margin: 168px 0px 0px 0px; /* Márgenes */
+        display: flex; /* Usar flexbox */
+        flex-direction: column; /* Dirección en columna */
+        align-items: center; /* Alinear elementos al centro */
+        width: 100%; /* Ancho completo */
+    }
+
+    .Encriptador-contenedor{
+        display: flex; /* Usar flexbox */
+        align-items: center; /* Alinear elementos al centro */
+        position: inherit; /* Posición heredada */
+    }
+
+    .Encriptador-aviso{
+        position: inherit; /* Posición heredada */
+        margin: 15px; /* Márgenes */
+    }
+
+    .tarjeta{
+        width: 665px; /* Ancho de la tarjeta */
+        height: 300px; /* Altura de la tarjeta */
+        display: flex; /* Usar flexbox */
+        justify-content: center; /* Justificar contenido al centro */
+        align-items: flex-end; /* Alinear elementos al final */
+    }
+
+    .tarjeta-contenedor{
+        display: block; /* Mostrar como bloque */
+        justify-content: center; /* Justificar contenido al centro */
+        align-items: center; /* Alinear elementos al centro */
+        width: 100%; /* Ancho completo */
+        position: absolute; /* Posición absoluta */
+        bottom: 20%; /* Desde abajo */
+        font-size: 24px; /* Tamaño de fuente */
+        font-weight: 700; /* Peso de la fuente negrita */
+    }
+    
+    .img-muñeco{
+        display: none; /* No mostrar imagen */
+    }
+
+    .btn-copiar{
+        position: inherit; /* Posición heredada */
+        width: 100%; /* Ancho completo */
+    }
+
+    .evaluar{
+        width: 100%; /* Ancho completo */
+        height: 210px; /* Altura */
+        padding: 10px; /* Relleno */
+    }
+}
+
+@media(max-width: 720px){
+    header .logo{
+        width: 100%; /* Ancho completo */
+        background: var(--white); /* Fondo blanco */
+        padding: 2px; /* Relleno */
+    }
+
+    .encriptar{
+        width: 90%; /* Ancho del 90% */
+        font-size: 24px; /* Tamaño de fuente */
+    }
+
+    .Encriptador-contenedor{
+        display: grid; /* Usar grid */
+        gap: 21px; /* Espacio entre elementos */
+    }
+
+    .tarjeta{
+        width: 90%; /* Ancho del 90% */
+    }
+
+    .copyright{
+        font-size: 20px; /* Tamaño de fuente */
+    }
+}
